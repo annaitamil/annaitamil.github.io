@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'tamil-title';
+    src: url('../fonts/Uni\ Ila.Sundaram-05.ttf')  format('truetype');
+}
+
+@font-face {
+    font-family: 'tamil-song';
+    src: url('../fonts/Uni\ Ila.Sundaram-10.ttf')  format('truetype');
+}
+
+@font-face {
+    font-family: 'tamil-common';
+    src: url('../fonts/Uni\ Ila.Sundaram-01.ttf')  format('truetype');
+}
+
+p {
+    font-family: 'tamil-common', Fallback, sans-serif !important;
+    font-size: 1.5em !important;
+}
+
+.common-top-margin
+{
+    margin-top: 2em;
+}
+
+.common-subtitle-width
+{
+    display:inline-block; 
+    width:4.5em;
+}
+
+.title {
+    font-family: 'tamil-title', Fallback, sans-serif;
+    font-size: 2.5em !important;
+}
+
+h2, h3, .menu {
+    font-family: 'tamil-common', Fallback, sans-serif;
+}
+
+.menu {
+    font-size: 1.5em !important;
+}
+
+.song {
+    font-family: 'tamil-song', Fallback, sans-serif;
+}
+
+.header-bar {
+    background-color: white !important;
+}
+
+.header-bar * {
+    color: black !important;
+}
+
+.title-btn
+{
+    font-size: 1.5em;
+    font-weight: 400;
+    background-color: #33a7ff !important;
+    color: #fff !important;
+    min-width: 2em;
+}
+
+.title-btn:hover
+{
+    background-color: #0084e7 !important;
+}
