@@ -4,11 +4,6 @@
 }
 
 @font-face {
-    font-family: 'tamil-song';
-    src: url('../fonts/Uni\ Ila.Sundaram-10.ttf')  format('truetype');
-}
-
-@font-face {
     font-family: 'tamil-common';
     src: url('../fonts/Uni\ Ila.Sundaram-01.ttf')  format('truetype');
 }
