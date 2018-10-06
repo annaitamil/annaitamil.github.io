@@ -70,11 +70,93 @@ app.on({ page: 'thirukkural', content: 'thirukkural.html' }, function (activity)
 
 app.on({ page: 'tamilagaradhi', content: 'tamilagaradhi.html' }, function (activity) {
     activity.onReady(function () {
+        var json = null;
+
+        var update = function () {
+            var listItems = '';
+
+            Object.keys(json.content).forEach(function (key) {
+                listItems += '<li><div class="item-content"><span class="title list-title">' + key + '</span><span class="body list-text">' + json.content[key] + '</span></div></li>';
+            });
+            
+            $('#tamilagaradhi-list').html(listItems);
+        };
+
+        load("json/tamilagaradhi.json", function (content) {
+            json = content;
+            update();
+        });
     });
 });
 
 app.on({ page: 'sivavakkiyam', content: 'sivavakkiyam.html' }, function (activity) {
     activity.onReady(function () {
+        var json = null;
+        var index = 0;
+
+        $("#forward").click(function () {
+            index = index + 1;
+            index = (index > 524) ? 0 : index;
+            update();
+        });
+
+        $("#back").click(function () {
+            index = index - 1;
+            index = (index < 0) ? 524 : index;
+            update();
+        });
+
+        var update = function () {
+            $('#sivavakkiyam').text(index + 1);
+
+            $('#group').text(json.content[index].group);
+            $('#line1').text(json.content[index].line1);
+            $('#line2').text(json.content[index].line2);
+            $('#line3').text(json.content[index].line3);
+            $('#line4').text(json.content[index].line4);
+        };
+
+        load("json/sivavakkiyam.json", function (content) {
+            json = content;
+            index = 0;
+            update();
+        });
+    });
+});
+
+app.on({ page: 'thirumanthiram', content: 'thirumanthiram.html' }, function (activity) {
+    activity.onReady(function () {
+        var json = null;
+        var index = 0;
+
+        $("#forward").click(function () {
+            index = index + 1;
+            index = (index > 3001) ? 0 : index;
+            update();
+        });
+
+        $("#back").click(function () {
+            index = index - 1;
+            index = (index < 0) ? 3001 : index;
+            update();
+        });
+
+        var update = function () {
+            $('#thirumanthiram').text(index + 1);
+
+            $('#group').text(json.content[index].group);
+            $('#chapter').text(json.content[index].chapter);
+            $('#line1').text(json.content[index].line1);
+            $('#line2').text(json.content[index].line2);
+            $('#line3').text(json.content[index].line3);
+            $('#line4').text(json.content[index].line4);
+        };
+
+        load("json/thirumanthiram.json", function (content) {
+            json = content;
+            index = 0;
+            update();
+        });
     });
 });
 

@@ -34,7 +34,7 @@ p {
     font-size: 2.5em !important;
 }
 
-h2, h3, .menu {
+h2, h3, .menu, .list-text {
     font-family: 'tamil-common', Fallback, sans-serif;
 }
 
@@ -42,8 +42,8 @@ h2, h3, .menu {
     font-size: 1.5em !important;
 }
 
-.song {
-    font-family: 'tamil-song', Fallback, sans-serif;
+.song, .list-title {
+    font-family: 'tamil-common', Fallback, sans-serif;
 }
 
 .header-bar {
@@ -63,7 +63,25 @@ h2, h3, .menu {
     min-width: 2em;
 }
 
+.list-title
+{
+    font-size: 1.7em !important;
+    font-weight: bold;
+}
+
+.list-text
+{
+    font-size: 1.2em !important;
+    line-height: 1.2em !important;
+}
+
 .title-btn:hover
 {
     background-color: #0084e7 !important;
+}
+
+.sub-title
+{
+    font-family: 'tamil-common', Fallback, sans-serif;
+    font-size: 1.5em;   
 }
