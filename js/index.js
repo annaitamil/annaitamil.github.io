@@ -75,6 +75,38 @@ app.on({ page: 'thirukkural', content: 'thirukkural.html' }, function (activity)
     });
 });
 
+app.on({ page: 'gnanakural', content: 'gnanakural.html' }, function (activity) {
+    activity.onReady(function () {
+        var json = null;
+        var index = 0;
+
+        $("#gnanakural-forward").click(function () {
+            index = index + 1;
+            index = (index > 309) ? 0 : index;
+            update();
+        });
+
+        $("#gnanakural-back").click(function () {
+            index = index - 1;
+            index = (index < 0) ? 309 : index;
+            update();
+        });
+
+        var update = function () {
+            $('#gnanakural').text(index + 1);
+            $('#gnanakural-line1').text(json.content[index][json.abbreviations['line1']]);
+            $('#gnanakural-line2').text(json.content[index][json.abbreviations['line2']]);
+            $('#gnanakural-chapter').text(json.chapters[json.content[index][json.abbreviations['chapter']]]);
+            $('#gnanakural-group').text(json.groups[json.content[index][json.abbreviations['group']]]);
+        };
+
+        load("json/gnanakural.json", function (content) {
+            json = content;
+            update();
+        });
+    });
+});
+
 app.on({ page: 'tamilagaradhi', content: 'tamilagaradhi.html' }, function (activity) {
     activity.onReady(function () {
         var json = null;
@@ -103,13 +135,13 @@ app.on({ page: 'sivavakkiyam', content: 'sivavakkiyam.html' }, function (activit
 
         $("#sivavakkiyam-forward").click(function () {
             index = index + 1;
-            index = (index > 524) ? 0 : index;
+            index = (index > 549) ? 0 : index;
             update();
         });
 
         $("#sivavakkiyam-back").click(function () {
             index = index - 1;
-            index = (index < 0) ? 524 : index;
+            index = (index < 0) ? 549 : index;
             update();
         });
 
