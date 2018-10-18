@@ -87,12 +87,12 @@ app.on({ page: 'thirukkural', content: 'thirukkural.html' }, function (activity)
             $('#kural-explanation').text(json.content[index][json.abbreviations['explanation']]);
 
             //Phone section
-            $('#phone-kural-line1').text(json.content[index][json.abbreviations['line1']]);
-            $('#phone-kural-line2').text(json.content[index][json.abbreviations['line2']]);
-            $('#phone-kural-chapter').text(json.chapters[json.content[index][json.abbreviations['chapter']]]);
-            $('#phone-kural-group').text(json.groups[json.content[index][json.abbreviations['group']]]);
-            $('#phone-kural-section').html(json.sections[json.content[index][json.abbreviations['section']]]);
-            $('#phone-kural-explanation').text(json.content[index][json.abbreviations['explanation']]);
+            // $('#phone-kural-line1').text(json.content[index][json.abbreviations['line1']]);
+            // $('#phone-kural-line2').text(json.content[index][json.abbreviations['line2']]);
+            // $('#phone-kural-chapter').text(json.chapters[json.content[index][json.abbreviations['chapter']]]);
+            // $('#phone-kural-group').text(json.groups[json.content[index][json.abbreviations['group']]]);
+            // $('#phone-kural-section').html(json.sections[json.content[index][json.abbreviations['section']]]);
+            // $('#phone-kural-explanation').text(json.content[index][json.abbreviations['explanation']]);
         };
 
         load("json/thirukkural.json", function (content) {
