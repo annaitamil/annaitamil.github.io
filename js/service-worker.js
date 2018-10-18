@@ -1,20 +1,20 @@
-var dataCacheName = 'annaitamil-011018';
-var cacheName = 'annaitamil';
+var dataCacheName = 'annaitamil-20181018';
+var cacheName = 'annaitamil-20181018';
 var filesToCache = [
   '/',
   '/index.html',
+  '/meignana_pulambal.html',
   '/home.html',
-  '/badragiriyar_meignana_pulambal.html',
-  '/konganar_vaalai_kummi.html',
   '/pazhamozhigal.html',
   '/sivavakkiyam.html',
   '/tamilagaradhi.html',
   '/thirukkural.html',
   '/thirumanthiram.html',
-  '/js/index.js',
+  '/vaalai_kummi.html',
+  '/js/index.min.js',
   '/js/jquery-3.2.1.min.js',
   '/js/phonon.min.js',
-  '/css/index.css',
+  '/css/index.min.css',
   '/css/phonon.min.css',
   '/fonts/material-design-icons.eot',
   '/fonts/material-design-icons.svg',
